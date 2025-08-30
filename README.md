@@ -38,6 +38,17 @@ E-Farming adalah aplikasi berbasis web yang digunakan untuk **pengelolaan data t
 
 ---
 
+## 📸 Hardware yang Digunakan
+
+### 1. RFID Reader (USB Keyboard)
+
+![Img 1](public/asset/rfid1.jpg)
+![Img 2](public/asset/rfid2.jpg)
+
+### 2. RFID Microchip + Injector
+
+![Img 3](public/asset/rfidTag.jpg)
+
 ## 📂 Struktur Direktori
 
 ```
@@ -65,6 +76,13 @@ e-farming/
 ---
 
 ## 🐑 Skema Sistem
+
+-   Domba diberi **RFID microchip** → disuntikkan ke leher.
+-   Peternak menggunakan **USB RFID reader keyboard** → sistem membaca ID domba.
+-   Data identitas & bobot tersimpan di database.
+-   Aplikasi menyediakan **Mengelola data**
+
+---
 
 ## 🚀 Instalasi & Konfigurasi
 
@@ -105,12 +123,5 @@ e-farming/
     ```bash
     php artisan serve
     ```
-
----
-
--   Domba diberi **RFID microchip** → disuntikkan ke leher.
--   Peternak menggunakan **USB RFID reader keyboard** → sistem membaca ID domba.
--   Data identitas & bobot tersimpan di database.
--   Aplikasi menyediakan **Mengelola data**
 
 ---
