@@ -8,12 +8,16 @@ use Illuminate\Support\Facades\Request as FacadesRequest;
 
 class tambahDombaController extends Controller
 {
-    public function index(){
+    // Menampilkan halaman scan rfid domba mengarah ke form tambah domba
+    public function index()
+    {
 
         return view('tambahDomba');
     }
 
-    public function insert(Request $request){
+    //menangani proses insert
+    public function insert(Request $request)
+    {
 
         $dataInsert = $request->validate([
             'rfid_tag' => 'required|string',
@@ -25,6 +29,6 @@ class tambahDombaController extends Controller
 
         dombas::create($dataInsert);
         
-        return redirect()->route('dataDomba');
+        return redirect()->route('dataDombaList');
     }
 }

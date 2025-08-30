@@ -7,7 +7,9 @@ use App\Models\dombas;
 
 class dataDombaController extends Controller
 {
-    public function index(){
+    //menampilkan list data domba
+    public function index()
+    {
 
         $dataDomba = dombas::get();
         

@@ -18,5 +18,10 @@ class dombas extends Model
         'id_induk',
         'status'
     ];
+
+        public function berat()
+    {
+        return $this->hasMany(berat::class, 'id_domba', 'id_domba');
+    }
 }
 

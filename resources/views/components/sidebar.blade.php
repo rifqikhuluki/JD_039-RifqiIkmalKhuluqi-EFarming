@@ -30,9 +30,23 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('dataDomba') }}" class="nav-link">
+                <a href="{{ route('dashboardDataDomba') }}" class="nav-link">
                   <p>
                     DATA DOMBA
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('dashboardMonitoringBobot') }}" class="nav-link">
+                  <p>
+                    MONITORING BOBOT
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('logout') }}" class="nav-link">
+                  <p>
+                    LOGOUT
                   </p>
                 </a>
               </li>

@@ -7,7 +7,9 @@ use PhpParser\Node\Expr\FuncCall;
 
 class homeController extends Controller
 {
-    public function index(){
+    //menampilkan halam home
+    public function index()
+    {
 
         return view('home');
         

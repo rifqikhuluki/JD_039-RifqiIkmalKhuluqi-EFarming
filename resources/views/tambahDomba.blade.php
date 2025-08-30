@@ -1,97 +1,101 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
 @section('content')
 <main class="app-main">
-<!--begin::App Content Header-->
-<div class="app-content-header">
-    <!--begin::Container-->
-    <div class="container-fluid">
-    <!--begin::Row-->
-    <div class="row">
-        <div class="col-sm-6"><h3 class="mb-0">Dashboard</h3></div>
-        <div class="col-sm-6">
-        <ol class="breadcrumb float-sm-end">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-        </ol>
+    <div class="app-content-header">
+        <div class="container-fluid">
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <h3 class="mb-0">Tambah Data Domba</h3>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Data Domba</a></li>
+                        <li class="breadcrumb-item active">Tambah</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
-    <!--end::Row-->
-    </div>
-    <!--end::Container-->
-</div>
-<!--end::App Content Header-->
-<!--begin::Col-->
-<div class="col-md-12">
-<!--begin::Quick Example-->
-<div class="card card-primary card-outline mb-4">
-    <!--begin::Header-->
-    <div class="card-header"><div class="card-title">Quick Example</div></div>
-    <!--end::Header-->
-    <!--begin::Form-->
-    <form action="{{ route('tambahDomba.insert') }}" method="POST">
-        {{ csrf_field() }}
-    <!--begin::Body-->
-    <div class="card-body">
-        <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">RFID TAG</label>
-        <input
-            type="text"
-            name="rfid_tag"
-            class="form-control"
-            id="exampleInputEmail1"
-            placeholder="Masukkan RFID Tag secara manual atau scan"
-        />
-        <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">NAMA DOMBA</label>
-        <input 
-            type="text" name="nama_domba" 
-            class="form-control" 
-            id="exampleInputPassword1" 
-            placeholder="Masukkan Nama Domba" 
-        />
-        </div>
-        <div class="input-group mb-3">
-        <label class="input-group-text" for="inputGroupFile02">JENIS KELAMIN</label>
-        <select type="text" name="jenis_kelamin" required class="form-control" id="exampleInputPassword1">
-        <option value="" disabled selected hidden>Masukkan Jenis Kelamin</option>
-            <option value="JANTAN">JANTAN</option>
-            <option value="BETINA">BETINA</option>
-        </select>
-        </div>
-        
-        <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">TANGGAL LAHIR</label>
-        <input 
-            type="date" name="tanggal_lahir" 
-            class="form-control" 
-            id="exampleInputPassword1" 
-            placeholder="Masukkan Tanggal Lahir Domba" 
-        />
-        </div>
 
-                <div class="input-group mb-3">
-        <label class="input-group-text" for="inputGroupFile02">STATUS</label>
-        <select type="text" name="status" required class="form-control" id="exampleInputPassword1">
-        <option value="" disabled selected hidden>Masukkan Status</option>
-            <option value="JANTAN">HIDUP</option>
-            <option value="BETINA">MATI</option>
-            <option value="BETINA">TERJUAL</option>
-        </select>
+    <section class="content">
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-lg border-0 rounded-3">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0"><i class="bi bi-plus-circle me-2"></i> Form Tambah Domba</h5>
+                    </div>
+
+                    <form action="{{ route('tambahDombaInsert') }}" method="POST">
+                        @csrf
+                        <div class="card-body">
+
+                            <!-- RFID -->
+                            <div class="mb-3">
+                                <label class="form-label">RFID Tag</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-upc-scan"></i></span>
+                                    <input type="text" name="rfid_tag" class="form-control" placeholder="Scan RFID atau masukkan manual" required>
+                                </div>
+                            </div>
+
+                            <!-- Nama -->
+                            <div class="mb-3">
+                                <label class="form-label">Nama Domba</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
+                                    <input type="text" name="nama_domba" class="form-control" placeholder="Masukkan nama domba" required>
+                                </div>
+                            </div>
+
+                            <!-- Jenis Kelamin -->
+                            <div class="mb-3">
+                                <label class="form-label">Jenis Kelamin</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-gender-ambiguous"></i></span>
+                                    <select name="jenis_kelamin" class="form-select" required>
+                                        <option value="" disabled selected hidden>Pilih jenis kelamin</option>
+                                        <option value="JANTAN">Jantan</option>
+                                        <option value="BETINA">Betina</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Tanggal Lahir -->
+                            <div class="mb-3">
+                                <label class="form-label">Tanggal Lahir</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                                    <input type="date" name="tanggal_lahir" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <!-- Status -->
+                            <div class="mb-3">
+                                <label class="form-label">Status</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-info-circle"></i></span>
+                                    <select name="status" class="form-select" required>
+                                        <option value="" disabled selected hidden>Pilih status domba</option>
+                                        <option value="HIDUP">Hidup</option>
+                                        <option value="MATI">Mati</option>
+                                        <option value="TERJUAL">Terjual</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="card-footer text-end">
+                            <button type="submit" class="btn btn-success px-4">
+                                <i class="bi bi-save me-1"></i> Simpan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
-    <!--end::Body-->
-    <!--begin::Footer-->
-    <div class="card-footer">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-    <!--end::Footer-->
-    </form>
-    <!--end::Form-->
-</div>
-<!--end::Quick Example-->
-</div>
-<!--end::Col-->
-<!--end::App Content-->
+    </section>
 </main>
 @endsection
