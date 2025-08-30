@@ -8,7 +8,7 @@ E-Farming adalah aplikasi berbasis web yang digunakan untuk **pengelolaan data t
 
 -   **📋 Data Domba**
 
-    -   Input identitas domba (ID, umur, jenis kelamin, ras, tanggal lahir, dsb).
+    -   Input identitas domba (ID, nama, jenis kelamin, ras, tanggal lahir, dsb).
     -   Menampilkan detail domba dalam bentuk profil.
     -   Cetak **sertifikat domba dalam format PDF** yang berisi data identitas lengkap.
 
@@ -40,7 +40,7 @@ E-Farming adalah aplikasi berbasis web yang digunakan untuk **pengelolaan data t
 
 ## 📸 Hardware yang Digunakan
 
-### 1. RFID Reader (USB Keyboard)
+### 1. RFID Reader
 
 ![Img 1](public/asset/rfid1.jpg)
 ![Img 2](public/asset/rfid2.webp)
