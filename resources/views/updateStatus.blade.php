@@ -7,12 +7,13 @@
         <div class="container-fluid">
             <div class="row mb-3">
                 <div class="col-sm-6">
-                    <h3 class="mb-0">Monitoring Bobot</h3>
+                    <h3 class="mb-0">Update Status Domba</h3>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Monitoring Bobot</li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('dashboardDataDomba') }}">Data Domba</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Update</li>
                     </ol>
                 </div>
             </div>
@@ -22,7 +23,7 @@
     <!-- Content -->
     <section class="content">
         <div class="container-fluid d-flex justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-11">
                 <div class="card shadow-lg border-0 rounded-3">
                     <div class="card-header bg-success text-white text-center">
                         <h4 class="mb-0">

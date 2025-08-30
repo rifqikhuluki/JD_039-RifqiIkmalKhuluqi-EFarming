@@ -46,6 +46,7 @@
                                 <th>RFID Tag</th>
                                 <th>Nama Domba</th>
                                 <th>Jenis Kelamin</th>
+                                <th>Ras</th>
                                 <th>Status</th>
                                 <th class="text-center" style="width: 120px;">Aksi</th>
                             </tr>
@@ -59,6 +60,7 @@
                                 <td>
                                     <span class="badge bg-info">{{ $domba->jenis_kelamin }}</span>
                                 </td>
+                                <td>{{ $domba->ras }}</td>
                                 <td>
                                     @if($domba->status == 'HIDUP')
                                         <span class="badge bg-success">Hidup</span>

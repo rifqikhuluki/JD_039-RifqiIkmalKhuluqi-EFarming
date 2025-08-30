@@ -23,12 +23,13 @@ class tambahDombaController extends Controller
             'rfid_tag' => 'required|string',
             'nama_domba' => 'required|string',
             'jenis_kelamin' => 'required|string',
+            'ras' => 'required|string',
             'tanggal_lahir' => 'required|string',
             'status' => 'required|string'
         ]);
 
         dombas::create($dataInsert);
         
-        return redirect()->route('dataDombaList');
+        return redirect()->route('detailDomba', ['rfid_tag' => $dataInsert['rfid_tag']]);
     }
 }

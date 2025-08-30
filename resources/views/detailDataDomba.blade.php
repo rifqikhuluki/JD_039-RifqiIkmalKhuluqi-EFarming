@@ -2,12 +2,27 @@
 
 @section('content')
 <div class="container py-4">
-    <h3 class="mb-4"><i class="fas fa-dog text-primary"></i> Detail Domba</h3>
+       <div class="app-content-header">
+        <div class="container-fluid">
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <h3 class="mb-0">Detail Domba</h3>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('dashboardDataDomba') }}">Data Domba</a></li>
+                        <li class="breadcrumb-item active">Detail</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
 
     @if($domba)
         <!-- Data Domba -->
         <div class="card shadow-sm mb-4 rounded-4">
-            <div class="card-header bg-primary text-white rounded-top-4">
+            <div class="card-header bg-success text-white rounded-top-4">
                 <i class="fas fa-info-circle"></i> Informasi Domba
             </div>
             <div class="card-body">
@@ -15,6 +30,7 @@
                     <li class="list-group-item"><i class="fas fa-hashtag text-secondary me-2"></i><b>ID Domba:</b> {{ $domba->id_domba }}</li>
                     <li class="list-group-item"><i class="fas fa-microchip text-secondary me-2"></i><b>RFID Tag:</b> {{ $domba->rfid_tag }}</li>
                     <li class="list-group-item"><i class="fas fa-venus-mars text-secondary me-2"></i><b>Jenis Kelamin:</b> {{ $domba->jenis_kelamin }}</li>
+                    <li class="list-group-item"><i class="fas fa-birthday-cake text-secondary me-2"></i><b>Ras :</b> {{ $domba->ras }}</li>
                     <li class="list-group-item"><i class="fas fa-birthday-cake text-secondary me-2"></i><b>Tanggal Lahir:</b> {{ $domba->tanggal_lahir }}</li>
                     <li class="list-group-item"><i class="fas fa-check-circle text-secondary me-2"></i><b>Status:</b> {{ $domba->status }}</li>
                 </ul>

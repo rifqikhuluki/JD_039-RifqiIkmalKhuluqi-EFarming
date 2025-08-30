@@ -22,6 +22,7 @@
             <tr><th>RFID Tag</th><td>{{ $domba->rfid_tag }}</td></tr>
             <tr><th>Nama</th><td>{{ $domba->nama_domba }}</td></tr>
             <tr><th>Jenis Kelamin</th><td>{{ $domba->jenis_kelamin }}</td></tr>
+            <tr><th>Ras</th><td>{{ $domba->ras }}</td></tr>
             <tr><th>Tanggal Lahir</th><td>{{ $domba->tanggal_lahir }}</td></tr>
             <tr><th>Status</th><td>{{ $domba->status }}</td></tr>
             <tr><th>Berat Terakhir</th><td>

@@ -1,6 +1,6 @@
 # 🐑 E-Farming - Sistem Pengelolaan Data Ternak Domba
 
-E-Farming adalah aplikasi berbasis web yang digunakan untuk **pengelolaan data ternak domba**. Aplikasi ini dirancang untuk membantu peternak dalam memantau identitas, bobot, dan riwayat kesehatan domba, serta terintegrasi dengan **RFID reader USB keyboard** untuk identifikasi otomatis domba yang telah ditanamkan **RFID microchip**.
+E-Farming adalah aplikasi berbasis web yang digunakan untuk **pengelolaan data ternak domba**. Aplikasi ini dirancang untuk membantu peternak dalam memantau identitas, dan bobot, serta terintegrasi dengan **RFID reader** untuk identifikasi otomatis domba yang telah ditanamkan **RFID microchip**.
 
 ---
 
@@ -8,7 +8,7 @@ E-Farming adalah aplikasi berbasis web yang digunakan untuk **pengelolaan data t
 
 -   **📋 Data Domba**
 
-    -   Input & update identitas domba (ID, umur, jenis kelamin, ras, tanggal lahir, dsb).
+    -   Input identitas domba (ID, umur, jenis kelamin, ras, tanggal lahir, dsb).
     -   Menampilkan detail domba dalam bentuk profil.
     -   Cetak **sertifikat domba dalam format PDF** yang berisi data identitas lengkap.
 
@@ -20,7 +20,7 @@ E-Farming adalah aplikasi berbasis web yang digunakan untuk **pengelolaan data t
 -   **🔖 Integrasi RFID**
 
     -   Setiap domba diberi **RFID microchip** yang disuntikkan ke leher.
-    -   Integrasi dengan **USB RFID reader keyboard** untuk identifikasi cepat domba.
+    -   Integrasi dengan **USB RFID** untuk identifikasi cepat domba.
 
 -   **📑 Laporan & Dokumentasi**
     -   Export sertifikat dalam format PDF.
@@ -53,6 +53,18 @@ e-farming/
 ```
 
 ---
+
+## 📖 Cara Penggunaan
+
+1. **Login ke aplikasi** menggunakan akun admin.
+2. **Tambahkan data domba** → isi identitas, lalu simpan.
+3. **Scan RFID domba** menggunakan USB RFID reader → otomatis tampil data domba.
+4. **Catat bobot terbaru** → sistem menyimpan riwayat timbang.
+5. **Cetak sertifikat domba (PDF)** jika diperlukan.
+
+---
+
+## 🐑 Skema Sistem
 
 ## 🚀 Instalasi & Konfigurasi
 
@@ -95,18 +107,6 @@ e-farming/
     ```
 
 ---
-
-## 📖 Cara Penggunaan
-
-1. **Login ke aplikasi** menggunakan akun admin.
-2. **Tambahkan data domba** → isi identitas, lalu simpan.
-3. **Scan RFID domba** menggunakan USB RFID reader → otomatis tampil data domba.
-4. **Catat bobot terbaru** → sistem menyimpan riwayat timbang.
-5. **Cetak sertifikat domba (PDF)** jika diperlukan.
-
----
-
-## 🐑 Skema Sistem
 
 -   Domba diberi **RFID microchip** → disuntikkan ke leher.
 -   Peternak menggunakan **USB RFID reader keyboard** → sistem membaca ID domba.

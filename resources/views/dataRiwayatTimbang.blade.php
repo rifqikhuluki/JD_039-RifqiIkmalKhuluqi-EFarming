@@ -10,10 +10,9 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end">
-                        <li class="breadcrumb-item">
-                            <a href="{{ route('detailDomba', $domba->rfid_tag) }}">Detail Domba</a>
-                        </li>
-                        <li class="breadcrumb-item active">Riwayat Timbang</li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('dashboardMonitoringBobot') }}">Monitoring Bobot</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Riwayat Timbang</li>
                     </ol>
                 </div>
             </div>

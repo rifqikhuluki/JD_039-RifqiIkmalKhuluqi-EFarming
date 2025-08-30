@@ -58,9 +58,6 @@ Route::get('/data-domba/update-status/scan', [updateStatusDomba::class, 'scan'])
 //update status domba
 Route::post('/data-domba/update-status/update', [updateStatusDomba::class, 'update'])->name('updateStatusDomba');
 
-//search rfid domba menuju list riwayat timbang domba
-Route::get('/monitoring-bobot/riwayat-timbang', [RiwayatTimbangController::class, 'index'])->name('riwayatTimbang');
-
 //menampilkan dashboard monitoring bobot
 Route::get('/monitoring-bobot', [dashboardMonitoringDombaController::class, 'index'])->name('dashboardMonitoringBobot');
 

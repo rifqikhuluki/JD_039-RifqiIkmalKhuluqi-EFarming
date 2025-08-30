@@ -6,13 +6,13 @@
         <div class="container-fluid">
             <div class="row mb-3">
                 <div class="col-sm-6">
-                    <h3 class="mb-0">Detail Domba</h3>
+                    <h3 class="mb-0">Catat Bobot Domba</h3>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Monitoring Bobot</a></li>
-                        <li class="breadcrumb-item active">Detail Domba</li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('dashboardMonitoringBobot') }}">Monitoring Bobot</a></li>
+                        <li class="breadcrumb-item active">Catat</li>
                     </ol>
                 </div>
             </div>
@@ -22,7 +22,7 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-md-10">
+                <div class="col-md-12">
 
                     <!-- Card Data Domba -->
                     <div class="card shadow-lg border-0 mb-4 rounded-3">
@@ -34,9 +34,10 @@
                                 <div class="col-md-6">
                                     <p><b>RFID Tag:</b> {{ $domba->rfid_tag }}</p>
                                     <p><b>Nama Domba:</b> {{ $domba->nama_domba }}</p>
+                                    <p><b>Jenis Kelamin:</b> {{ $domba->jenis_kelamin }}</p>
                                 </div>
                                 <div class="col-md-6">
-                                    <p><b>Jenis Kelamin:</b> {{ $domba->jenis_kelamin }}</p>
+                                    <p><b>Jenis Kelamin:</b> {{ $domba->ras }}</p>
                                     <p><b>Status:</b> {{ $domba->status ?? '-' }}</p>
                                 </div>
                             </div>
@@ -45,7 +46,7 @@
 
                     <!-- Card Form Catat Bobot -->
                     <div class="card shadow-lg border-0 rounded-3">
-                        <div class="card-header bg-primary text-white">
+                        <div class="card-header bg-success text-white">
                             <h5 class="mb-0"><i class="bi bi-scale me-2"></i> Catat Bobot Domba</h5>
                         </div>
                         <form action="{{ route('catatBobotInsert') }}" method="POST">

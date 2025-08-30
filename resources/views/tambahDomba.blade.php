@@ -10,8 +10,8 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Data Domba</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('dashboardDataDomba') }}">Data Domba</a></li>
                         <li class="breadcrumb-item active">Tambah</li>
                     </ol>
                 </div>
@@ -21,7 +21,7 @@
 
     <section class="content">
         <div class="container-fluid d-flex justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card shadow-lg border-0 rounded-3">
                     <div class="card-header bg-success text-white">
                         <h5 class="mb-0"><i class="bi bi-plus-circle me-2"></i> Form Tambah Domba</h5>
@@ -59,6 +59,15 @@
                                         <option value="JANTAN">Jantan</option>
                                         <option value="BETINA">Betina</option>
                                     </select>
+                                </div>
+                            </div>
+
+                            <!-- Ras -->
+                            <div class="mb-3">
+                                <label class="form-label">Ras</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                                    <input type="text" name="ras" class="form-control" placeholder="Masukkan ras domba" required>
                                 </div>
                             </div>
 

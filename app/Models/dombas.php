@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class dombas extends Model
 {
+    use HasFactory;
+    
     protected $table = 'dombas';
 
     protected $primaryKey = 'id_domba';
@@ -15,7 +18,7 @@ class dombas extends Model
         'nama_domba',
         'jenis_kelamin',
         'tanggal_lahir',
-        'id_induk',
+        'ras',
         'status'
     ];
 
