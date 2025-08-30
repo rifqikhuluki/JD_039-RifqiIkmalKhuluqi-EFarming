@@ -43,11 +43,11 @@ E-Farming adalah aplikasi berbasis web yang digunakan untuk **pengelolaan data t
 ### 1. RFID Reader (USB Keyboard)
 
 ![Img 1](public/asset/rfid1.jpg)
-![Img 2](public/asset/rfid2.jpg)
+![Img 2](public/asset/rfid2.webp)
 
 ### 2. RFID Microchip + Injector
 
-![Img 3](public/asset/rfidTag.jpg)
+![Img 3](public/asset/rfidTag.webp)
 
 ## 📂 Struktur Direktori
 
